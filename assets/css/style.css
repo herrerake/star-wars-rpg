@@ -8,6 +8,11 @@ body {
 .container {
   text-align: center;
 }
+
+.row {
+  justify-content: center;
+}
+
 .jumbotron-fluid {
   background: inherit;
   text-align: center;

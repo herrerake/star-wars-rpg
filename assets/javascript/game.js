@@ -14,9 +14,9 @@ $(document).ready(function() {
     "Princess Leia": {
       name: "Princess Leia",
       health: 200,
-      attack: 10,
+      attack: 15,
       imageUrl: "assets/images/leia.jpg",
-      counterAttack: 20
+      counterAttack: 30
     },
     "Yoda": {
       name: "Yoda",
@@ -104,7 +104,7 @@ $(document).ready(function() {
     var gameState = $("<div class='row'>").text(resultMessage);
 
     // Render the restart button and victory/defeat message to the page
-    $("body").append(gameState);
+    $("#game-message").append(gameState);
     $("#game-message").append(restart);
   };
 
@@ -168,7 +168,7 @@ $(document).ready(function() {
     // If there is a defender, combat will occur
     if($("#defender").children().length !==0) {
       // creates message for our attack and our opponents counter attack
-      var attackMessage = "You attacked " + defender.name + " for " + attacker.attack * turnCounter + "damage.";
+      var attackMessage = "You attacked " + defender.name + " for " + attacker.attack * turnCounter + " damage.";
       var counterAttackMessage = defender.name + " attacked you back for " + defender.counterAttack + " damage.";
       clearMessage();
 

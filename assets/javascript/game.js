@@ -133,6 +133,7 @@ $(document).ready(function() {
       }
       // hide the character select div
       $("#characters-section").hide();
+      $(".hideTitle").hide();
 
       // then render our selected characters and our combatants
       updateCharacter(attacker, "#selected-character");
@@ -153,6 +154,7 @@ $(document).ready(function() {
       // remove element as it will now be a new defender
       $(this).remove();
       clearMessage();
+      $("#available-to-attack-section").hide();
     }
   });
 
@@ -194,7 +196,7 @@ $(document).ready(function() {
       else {
         // kill the defender and remove their card
         $("#defender").empty();
-
+        $("#available-to-attack-section").show();
         var gameStateMessage = "You have defeated " + defender.name + ", choose another enemy to defeat!";
         renderMessage(gameStateMessage);
 

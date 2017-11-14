@@ -20,17 +20,30 @@
   </div>
 
   <div class="container">
-    <h3>CHOOSE YOUR FIGHTER!</h3>
+    <h3 class="hideTitle">CHOOSE YOUR FIGHTER!</h3>
     <div class="row" id="characters-section">
     </div>
   </div>
 
+  <div class="container">
+    <h3 class="">CHOOSE YOUR ENEMY!</h3>
+    <div class="row" id="available-to-attack-section">
+    </div>
+  </div>
+
+  <div class="section-title">Fight Section</div>
+  <div id="fight-section">
+    <button id="attack-button">Attack</button>
+  </div>
+
   <!-- Section for our selected character. -->
   <div class="container">
-    <div class="row" id="selected-character-section"></div>
-    <div class="row section-title">Your Character</div>
-    <!-- Where our selected character will appear. -->
-    <div id="selected-character"></div>
+    <div class="row" id="selected-character-section">
+      <!-- Where our selected character will appear. -->
+      <div id="selected-character"></div>
+      <!-- Where our defender will appear. -->
+      <div id="defender"></div>
+    </div>
   </div>
 
   <!-- Where our enemies available to attack will appear. -->
@@ -40,25 +53,15 @@
     </div>
   </div>
 
-
-  <div class="section-title">Fight Section</div>
-  <div id="fight-section">
-    <button id="attack-button">Attack</button>
-  </div>
-
   <div id="action">
     <div class="character-section">
       <div class="section-title">Defender</div>
-      <!-- Where our defender will appear. -->
-      <div id="defender"></div>
     </div>
   </div>
 
 </div>
 <!-- Area for game messages. -->
 <div class="container" id="game-message"></div>
-</body>
-
 
 <script src="https://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="assets/javascript/game.js"></script>

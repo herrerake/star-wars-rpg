@@ -19,25 +19,25 @@
     </div>
   </div>
 
-  <div class="container">
-    <h3 class="hideTitle">CHOOSE YOUR FIGHTER!</h3>
+  <div class="container" id="choose-fighter-container">
+    <h3 class="">CHOOSE YOUR FIGHTER!</h3>
     <div class="row" id="characters-section">
     </div>
   </div>
 
-  <div class="container">
+  <div class="container hideContainer" id="choose-enemy-container">
     <h3 class="">CHOOSE YOUR ENEMY!</h3>
     <div class="row" id="available-to-attack-section">
     </div>
   </div>
 
-  <div class="section-title">Fight Section</div>
-  <div id="fight-section">
+  <div class="container section-title hideContainer" id="fight-section">
     <button id="attack-button">Attack</button>
   </div>
 
   <!-- Section for our selected character. -->
-  <div class="container">
+  <div class="container hideContainer" id="battleground">
+    <h3>ATTACK!</h3>
     <div class="row" id="selected-character-section">
       <!-- Where our selected character will appear. -->
       <div id="selected-character"></div>
@@ -48,25 +48,17 @@
 
   <!-- Where our enemies available to attack will appear. -->
   <div class="container">
-    <h3>ATTACK!</h3>
     <div class="row" id="available-to-attack-section">
     </div>
   </div>
 
-  <div id="action">
-    <div class="character-section">
-      <div class="section-title">Defender</div>
-    </div>
-  </div>
+  <!-- Area for game messages. -->
+  <div class="container" id="game-message"></div>
 
-</div>
-<!-- Area for game messages. -->
-<div class="container" id="game-message"></div>
-
-<script src="https://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="assets/javascript/game.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>

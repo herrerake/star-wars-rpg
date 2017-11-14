@@ -18,3 +18,11 @@ body {
   text-align: center;
   color: #FFD700;
 }
+
+.hideTitle {
+  display: none;
+}
+
+.hideContainer {
+  display: none !important;
+}

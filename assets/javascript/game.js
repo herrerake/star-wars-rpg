@@ -101,11 +101,11 @@ $(document).ready(function() {
       location.reload();
     });
     // build div that will display the victory/defeat message
-    var gameState = $("<div>").text(resultMessage);
+    var gameState = $("<div class='row'>").text(resultMessage);
 
     // Render the restart button and victory/defeat message to the page
     $("body").append(gameState);
-    $("body").append(restart);
+    $("#game-message").append(restart);
   };
 
   // Function to clear the game message section
@@ -134,6 +134,8 @@ $(document).ready(function() {
       // hide the character select div
       $("#characters-section").hide();
       $(".hideTitle").hide();
+      $("#choose-fighter-container").addClass("hideContainer");
+      $("#choose-enemy-container").removeClass("hideContainer")
 
       // then render our selected characters and our combatants
       updateCharacter(attacker, "#selected-character");
@@ -155,6 +157,9 @@ $(document).ready(function() {
       $(this).remove();
       clearMessage();
       $("#available-to-attack-section").hide();
+      $("#choose-enemy-container").addClass("hideContainer");
+      $("#battleground").removeClass("hideContainer");
+      $("#fight-section").removeClass("hideContainer");
     }
   });
 
@@ -190,6 +195,7 @@ $(document).ready(function() {
         if (attacker.health <= 0) {
           clearMessage();
           restartGame("YOU LOSE GAME OVER!");
+          alert("YOU LOSE! GAME OVER!!!")
           $("#attack-button").off("click");
         }
       }
@@ -197,6 +203,9 @@ $(document).ready(function() {
         // kill the defender and remove their card
         $("#defender").empty();
         $("#available-to-attack-section").show();
+        $("#choose-enemy-container").removeClass("hideContainer");
+        $("#fight-section").addClass("hideContainer");
+        $("#battleground").addClass("hideContainer");
         var gameStateMessage = "You have defeated " + defender.name + ", choose another enemy to defeat!";
         renderMessage(gameStateMessage);
 
@@ -209,6 +218,8 @@ $(document).ready(function() {
           clearMessage();
           $("#attack-button").off("click");
           restartGame("YOU WIN! GAME OVER!!!");
+          alert("YOU WIN! GAME OVER!!!")
+          $("#choose-enemy-container").addClass("hideContainer");
         }
       }
       //increment turn counter. this is used for determining how much damage the player does
